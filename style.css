@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #646cff;
+    --hover-color: #535bf2;
+    --bg-color: #242424;
+    --text-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.container {
+    text-align: center;
+    padding: 2rem;
+    max-width: 600px;
+    width: 100%;
+}
+
+.stopwatch {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin-bottom: 2rem;
+}
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 0.8em 1.5em;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: var(--primary-color);
+    color: white;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.laps {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.laps h2 {
+    margin-top: 0;
+}
+
+#lapTimes {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#lapTimes li {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: monospace;
+}
+
+#lapTimes li:last-child {
+    border-bottom: none;
+}
